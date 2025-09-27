@@ -1,0 +1,33 @@
+{
+  "name": "@supaweb3/storybook",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Storybook documentation for SupaWeb3 UI components",
+  "scripts": {
+    "dev": "storybook dev -p 6006",
+    "build": "storybook build",
+    "preview": "serve storybook-static",
+    "typecheck": "echo 'Storybook typecheck skipped - demo files only'"
+  },
+  "dependencies": {
+    "@thenightproject/supaweb3-ui": "workspace:*",
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.6.17",
+    "@storybook/addon-interactions": "^7.6.17",
+    "@storybook/addon-links": "^7.6.17",
+    "@storybook/blocks": "^7.6.17",
+    "@storybook/testing-library": "^0.2.2",
+    "@storybook/vue3": "^7.6.17",
+    "@storybook/vue3-vite": "^7.6.17",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.35",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.6.17",
+    "tailwindcss": "^3.4.1",
+    "vite": "^5.1.6"
+  }
+}

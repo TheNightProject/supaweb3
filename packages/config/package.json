@@ -1,0 +1,39 @@
+{
+  "name": "@thenightproject/supaweb3-config",
+  "version": "0.2.3",
+  "description": "Tailwind CSS configuration preset for SupaWeb3 UI",
+  "homepage": "https://supaweb3.com",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "scripts": {},
+  "peerDependencies": {
+    "tailwindcss": "^3.0.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.4.2"
+  },
+  "keywords": [
+    "tailwind",
+    "tailwindcss",
+    "config",
+    "preset",
+    "web3",
+    "ui",
+    "theme"
+  ],
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thenightproject/supaweb3.git",
+    "directory": "packages/config"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "public"
+  }
+}

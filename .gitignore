@@ -1,0 +1,67 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build outputs
+dist/
+build/
+**/dist/
+**/build/
+
+# Development
+.env
+.env.local
+.env.production
+**/.env
+**/.env.local
+**/.env.production
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+**/logs/
+
+# Coverage
+coverage/
+**/coverage/
+
+# Cache
+.cache/
+**/.cache/
+.turbo/
+**/.turbo/
+
+# Nuxt
+.nuxt/
+**/.nuxt/
+.output/
+**/.output/
+.nitro/
+**/.nitro/
+
+# Storybook
+storybook-static/
+**/storybook-static/
+
+# Package managers
+package-lock.json
+yarn.lock
+
+# Temporary files
+*.tmp
+*.temp
+
+CLAUDE.md
+.claude 
+website
+website-backup

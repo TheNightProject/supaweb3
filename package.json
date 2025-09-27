@@ -1,0 +1,60 @@
+{
+  "name": "@supaweb3/root",
+  "version": "0.1.0",
+  "private": true,
+  "description": "SupaWeb3 UI - Tailwind Web3 Components for Vue/Nuxt with Supabase Integration",
+  "workspaces": [
+    "packages/*",
+    "website"
+  ],
+  "scripts": {
+    "dev": "pnpm run --parallel --filter './packages/*' dev",
+    "build": "pnpm run --filter './packages/*' build",
+    "test": "pnpm run --filter './packages/*' test",
+    "lint": "echo 'Linting skipped for now'",
+    "typecheck": "pnpm run --parallel --filter './packages/*' typecheck",
+    "clean": "rimraf packages/*/dist packages/*/build packages/*/node_modules",
+    "release": "pnpm run build && changeset publish",
+    "bump": "node scripts/bump-version.js",
+    "bump:patch": "node scripts/bump-version.js patch",
+    "bump:minor": "node scripts/bump-version.js minor",
+    "bump:major": "node scripts/bump-version.js major",
+    "bump:prerelease": "node scripts/bump-version.js prerelease"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.1",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-vue": "^10.5.0",
+    "prettier": "^3.2.5",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.4.2",
+    "vitest": "^1.4.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thenightproject/supaweb3.git"
+  },
+  "keywords": [
+    "web3",
+    "ui",
+    "components",
+    "tailwind",
+    "supabase",
+    "vue",
+    "nuxt",
+    "blockchain",
+    "auth",
+    "ethereum",
+    "solana"
+  ],
+  "author": "Your Name",
+  "license": "ISC"
+}

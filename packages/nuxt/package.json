@@ -1,0 +1,64 @@
+{
+  "name": "@thenightproject/supaweb3-nuxt",
+  "version": "0.2.3",
+  "description": "Nuxt 3 module for SupaWeb3 UI components",
+  "homepage": "https://supaweb3.com",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/types.d.ts",
+      "import": "./dist/module.mjs",
+      "require": "./dist/module.cjs"
+    }
+  },
+  "main": "./dist/module.cjs",
+  "types": "./dist/types.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepack": "nuxt-module-build build",
+    "dev": "nuxi dev playground",
+    "dev:build": "nuxi build playground",
+    "dev:prepare": "nuxt-module-build build --stub && nuxi prepare playground",
+    "build": "nuxt-module-build build",
+    "typecheck": "nuxi typecheck"
+  },
+  "dependencies": {
+    "@nuxt/kit": "^3.11.1",
+    "@thenightproject/supaweb3-config": "workspace:*",
+    "@thenightproject/supaweb3-ui": "workspace:*"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "^1.0.8",
+    "@nuxt/module-builder": "^0.5.5",
+    "@nuxt/schema": "^3.11.1",
+    "@types/node": "^24.6.1",
+    "nuxt": "^3.11.1",
+    "typescript": "^5.9.2",
+    "vue-tsc": "^2.1.10"
+  },
+  "peerDependencies": {
+    "nuxt": "^3.0.0"
+  },
+  "keywords": [
+    "nuxt",
+    "nuxt3",
+    "vue",
+    "web3",
+    "ui",
+    "components",
+    "tailwind",
+    "module"
+  ],
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thenightproject/supaweb3.git",
+    "directory": "packages/nuxt"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "restricted"
+  }
+}
