@@ -1,6 +1,6 @@
 {
   "name": "@thenightproject/supaweb3-nuxt",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "description": "Nuxt 3 module for SupaWeb3 UI components",
   "homepage": "https://supaweb3.com",
   "type": "module",

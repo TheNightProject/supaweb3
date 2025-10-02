@@ -19,24 +19,18 @@ export { default as LiquidityPool } from './components/defi/LiquidityPool.vue'
 export { default as YieldFarming } from './components/defi/YieldFarming.vue'
 export { default as LendingBorrow } from './components/defi/LendingBorrow.vue'
 
+// Gaming Components
+export { default as GameAssets } from './components/gaming/GameAssets.vue'
+export { default as QuestTracker } from './components/gaming/QuestTracker.vue'
+
 // Governance Components
 export { default as ProposalCard } from './components/governance/ProposalCard.vue'
 export { default as VotingInterface } from './components/governance/VotingInterface.vue'
 export { default as DAOMembership } from './components/governance/DAOMembership.vue'
 
-// Portfolio/Analytics Components
-export { default as PortfolioOverview } from './components/portfolio/PortfolioOverview.vue'
-export { default as PnLTracker } from './components/portfolio/PnLTracker.vue'
-export { default as GasTracker } from './components/portfolio/GasTracker.vue'
-
-// Notification Components
-export { default as Web3Toast } from './components/notifications/Web3Toast.vue'
-export { default as PriceAlert } from './components/notifications/PriceAlert.vue'
-
-// Gaming/Social Components
-export { default as GameAssets } from './components/gaming/GameAssets.vue'
-export { default as QuestTracker } from './components/gaming/QuestTracker.vue'
-export { default as SocialProfile } from './components/social/SocialProfile.vue'
+// Identity Components
+export { default as SupaWeb3Address } from './components/identity/SupaWeb3Address.vue'
+export { default as SupaWeb3Avatar } from './components/identity/SupaWeb3Avatar.vue'
 
 // NFT Components
 export { default as NFTCard } from './components/nft/NFTCard.vue'
@@ -45,7 +39,20 @@ export { default as NFTGallery } from './components/nft/NFTGallery.vue'
 // Network Components
 export { default as ChainSwitcher } from './components/network/ChainSwitcher.vue'
 
+// Notification Components
+export { default as Web3Toast } from './components/notifications/Web3Toast.vue'
+export { default as PriceAlert } from './components/notifications/PriceAlert.vue'
+
+// Portfolio/Analytics Components
+export { default as PortfolioOverview } from './components/portfolio/PortfolioOverview.vue'
+export { default as PnLTracker } from './components/portfolio/PnLTracker.vue'
+export { default as GasTracker } from './components/portfolio/GasTracker.vue'
+
+// Social Components
+export { default as SocialProfile } from './components/social/SocialProfile.vue'
+
 // Token Components
+export { default as TokenBalance } from './components/tokens/TokenBalance.vue'
 export { default as TokenSwap } from './components/tokens/TokenSwap.vue'
 export { default as SendToken } from './components/tokens/SendToken.vue'
 
