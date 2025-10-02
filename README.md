@@ -425,6 +425,7 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 ## 🔗 Links
 
 - [Documentation](https://thenightproject.github.io/supaweb3)
+- [Changelog](https://supaweb3.com/changelog)
 - [GitHub Repository](https://github.com/thenightproject/supaweb3)
 - [Issue Tracker](https://github.com/thenightproject/supaweb3/issues)
 
