@@ -180,37 +180,53 @@ const handleSwap = (swapData) => {
 ### Nuxt 3/4 Integration
 
 **Prerequisites:**
+
+SupaWeb3 requires Tailwind CSS. Choose one option:
+
 ```bash
-# Install Tailwind CSS for Nuxt (required)
+# Option 1: @nuxt/ui (includes Tailwind v4 + beautiful UI components)
+pnpm add @nuxt/ui
+
+# Option 2: @nuxtjs/tailwindcss (Tailwind v3)
 pnpm add -D @nuxtjs/tailwindcss
 ```
 
 **Configuration:**
+
 ```javascript
-// nuxt.config.ts (GitHub Packages)
+// With @nuxt/ui (recommended)
 export default defineNuxtConfig({
   modules: [
-    '@nuxtjs/tailwindcss',  // Required for styling
-    '@thenightproject/supaweb3-nuxt'
-  ],
-  supaweb3: {
-    // Module configuration - CSS is auto-imported by the module
-  }
+    '@nuxt/ui',
+    '@thenightproject/supaweb3-nuxt'  // or '@supaweb3/nuxt' from NPM
+  ]
 })
 
-// nuxt.config.ts (NPM)
+// With @nuxtjs/tailwindcss
 export default defineNuxtConfig({
   modules: [
-    '@nuxtjs/tailwindcss',  // Required for styling
-    '@supaweb3/nuxt'
-  ],
+    '@nuxtjs/tailwindcss',
+    '@thenightproject/supaweb3-nuxt'  // or '@supaweb3/nuxt' from NPM
+  ]
+})
+```
+
+**Module Options:**
+
+```javascript
+export default defineNuxtConfig({
+  modules: ['@thenightproject/supaweb3-nuxt'],
   supaweb3: {
-    // Module configuration - CSS is auto-imported by the module
+    prefix: '',           // Component prefix (e.g., 'Supa' -> <SupaWalletConnectButton>)
+    global: true,         // Auto-import components globally
+    tailwindConfig: true  // Auto-add Tailwind preset
   }
 })
 ```
 
 > ✅ **Compatibility**: Works with Nuxt 3.0+ and Nuxt 4.0+
+>
+> 🎨 **Auto-Detection**: The module automatically detects Tailwind CSS v3 or v4
 
 ## 🎨 Styling & Theming
 
