@@ -41,20 +41,36 @@ const module: NuxtModule<ModuleOptions> = defineNuxtModule<ModuleOptions>({
 
     // Add Tailwind config preset if enabled
     if (options.tailwindConfig) {
+      // Check for @nuxtjs/tailwindcss module (Nuxt 3 / Tailwind v3)
       const hasTailwindModule = nuxt.options.modules.some(m =>
         typeof m === 'string' ? m === '@nuxtjs/tailwindcss' : false
       )
 
+      // Check for @nuxt/ui which includes Tailwind v4
+      const hasNuxtUI = nuxt.options.modules.some(m =>
+        typeof m === 'string' ? m === '@nuxt/ui' : false
+      )
+
+      // Check for @tailwindcss/postcss in postcss plugins (Tailwind v4)
+      const hasTailwindV4 = nuxt.options.postcss?.plugins?.['@tailwindcss/postcss'] !== undefined
+
       if (hasTailwindModule) {
+        // Tailwind v3 via @nuxtjs/tailwindcss
         nuxt.hook('tailwindcss:config' as any, (tailwindConfig: any) => {
           tailwindConfig.presets = tailwindConfig.presets || []
           tailwindConfig.presets.push('@thenightproject/supaweb3-config')
         })
+      } else if (hasNuxtUI || hasTailwindV4) {
+        // Tailwind v4 is present (via @nuxt/ui or @tailwindcss/postcss)
+        // For Tailwind v4, the preset is handled via CSS imports
+        // No config hook needed
       } else {
+        // No Tailwind CSS detected
         console.warn(
-          '[@supaweb3/nuxt] Tailwind CSS module not found. ' +
-          'Install @nuxtjs/tailwindcss to use Tailwind features:\n' +
-          '  pnpm add -D @nuxtjs/tailwindcss'
+          '[@supaweb3/nuxt] Tailwind CSS not detected. ' +
+          'For proper styling, install one of:\n' +
+          '  • @nuxtjs/tailwindcss (Tailwind v3): pnpm add -D @nuxtjs/tailwindcss\n' +
+          '  • @nuxt/ui (includes Tailwind v4): pnpm add @nuxt/ui'
         )
       }
     }
