@@ -39,7 +39,8 @@
     "vue-tsc": "^2.1.10"
   },
   "peerDependencies": {
-    "nuxt": ">=3.0.0"
+    "nuxt": ">=3.0.0",
+    "@nuxtjs/tailwindcss": "^6.0.0"
   },
   "keywords": [
     "nuxt",
