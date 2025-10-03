@@ -179,10 +179,20 @@ const handleSwap = (swapData) => {
 
 ### Nuxt 3/4 Integration
 
+**Prerequisites:**
+```bash
+# Install Tailwind CSS for Nuxt (required)
+pnpm add -D @nuxtjs/tailwindcss
+```
+
+**Configuration:**
 ```javascript
 // nuxt.config.ts (GitHub Packages)
 export default defineNuxtConfig({
-  modules: ['@thenightproject/supaweb3-nuxt'],
+  modules: [
+    '@nuxtjs/tailwindcss',  // Required for styling
+    '@thenightproject/supaweb3-nuxt'
+  ],
   supaweb3: {
     // Module configuration - CSS is auto-imported by the module
   }
@@ -190,7 +200,10 @@ export default defineNuxtConfig({
 
 // nuxt.config.ts (NPM)
 export default defineNuxtConfig({
-  modules: ['@supaweb3/nuxt'],
+  modules: [
+    '@nuxtjs/tailwindcss',  // Required for styling
+    '@supaweb3/nuxt'
+  ],
   supaweb3: {
     // Module configuration - CSS is auto-imported by the module
   }

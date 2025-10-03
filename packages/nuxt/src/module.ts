@@ -41,17 +41,22 @@ const module: NuxtModule<ModuleOptions> = defineNuxtModule<ModuleOptions>({
 
     // Add Tailwind config preset if enabled
     if (options.tailwindConfig) {
-      nuxt.hook('tailwindcss:config' as any, (tailwindConfig: any) => {
-        tailwindConfig.presets = tailwindConfig.presets || []
-        tailwindConfig.presets.push('@thenightproject/supaweb3-config')
-      })
-    }
+      const hasTailwindModule = nuxt.options.modules.some(m =>
+        typeof m === 'string' ? m === '@nuxtjs/tailwindcss' : false
+      )
 
-    // Install @nuxtjs/tailwindcss if not already installed
-    if (!nuxt.options.modules.some(m =>
-      typeof m === 'string' ? m === '@nuxtjs/tailwindcss' : false
-    )) {
-      await installModule('@nuxtjs/tailwindcss')
+      if (hasTailwindModule) {
+        nuxt.hook('tailwindcss:config' as any, (tailwindConfig: any) => {
+          tailwindConfig.presets = tailwindConfig.presets || []
+          tailwindConfig.presets.push('@thenightproject/supaweb3-config')
+        })
+      } else {
+        console.warn(
+          '[@supaweb3/nuxt] Tailwind CSS module not found. ' +
+          'Install @nuxtjs/tailwindcss to use Tailwind features:\n' +
+          '  pnpm add -D @nuxtjs/tailwindcss'
+        )
+      }
     }
 
     // Transpile @thenightproject/supaweb3-ui

@@ -40,6 +40,7 @@
   },
   "peerDependencies": {
     "nuxt": ">=3.0.0",
+    "@tailwindcss/postcss": "^4.1.14",
     "@nuxtjs/tailwindcss": "^6.0.0"
   },
   "keywords": [
