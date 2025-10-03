@@ -18,7 +18,7 @@ A comprehensive Vue 3 Web3 UI component library built with TypeScript and Tailwi
 | Package | Description |
 |---------|-------------|
 | `@thenightproject/supaweb3-ui` | Core Vue 3 Web3 UI components |
-| `@thenightproject/supaweb3-nuxt` | Nuxt 3 module for easy integration |
+| `@thenightproject/supaweb3-nuxt` | Nuxt 3/4 module for easy integration |
 | `@thenightproject/supaweb3-config` | Tailwind CSS configuration preset |
 
 ## 🎨 Component Categories
@@ -177,7 +177,7 @@ const handleSwap = (swapData) => {
 </script>
 ```
 
-### Nuxt 3 Integration
+### Nuxt 3/4 Integration
 
 ```javascript
 // nuxt.config.ts (GitHub Packages)
@@ -196,6 +196,8 @@ export default defineNuxtConfig({
   }
 })
 ```
+
+> ✅ **Compatibility**: Works with Nuxt 3.0+ and Nuxt 4.0+
 
 ## 🎨 Styling & Theming
 

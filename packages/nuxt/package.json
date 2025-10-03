@@ -1,7 +1,7 @@
 {
   "name": "@thenightproject/supaweb3-nuxt",
-  "version": "0.3.0",
-  "description": "Nuxt 3 module for SupaWeb3 UI components",
+  "version": "0.3.1",
+  "description": "Nuxt 3/4 module for SupaWeb3 UI components",
   "homepage": "https://supaweb3.com",
   "type": "module",
   "exports": {
@@ -39,11 +39,12 @@
     "vue-tsc": "^2.1.10"
   },
   "peerDependencies": {
-    "nuxt": "^3.0.0"
+    "nuxt": ">=3.0.0"
   },
   "keywords": [
     "nuxt",
     "nuxt3",
+    "nuxt4",
     "vue",
     "web3",
     "ui",

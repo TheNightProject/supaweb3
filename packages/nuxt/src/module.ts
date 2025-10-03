@@ -13,7 +13,7 @@ const module: NuxtModule<ModuleOptions> = defineNuxtModule<ModuleOptions>({
     name: '@supaweb3/nuxt',
     configKey: 'supaweb3',
     compatibility: {
-      nuxt: '^3.0.0'
+      nuxt: '>=3.0.0'
     }
   },
   defaults: {

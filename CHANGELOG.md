@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.1] - 2025-10-02
+
+### Changed
+- Updated Nuxt compatibility from `^3.0.0` to `>=3.0.0` to officially support both Nuxt 3 and Nuxt 4
+- Updated package description to reflect Nuxt 3/4 support
+- Added `nuxt4` keyword to package metadata
+
+### Documentation
+- Updated README with Nuxt 3/4 integration section and compatibility note
+- Updated CLAUDE.md references to indicate Nuxt 3/4 support throughout
+
 ## [0.3.0] - 2025-10-02
 
 ### Added
