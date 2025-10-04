@@ -359,6 +359,9 @@ jobs:
         with:
           name: build-artifacts
 
+      - name: Build Storybook
+        run: pnpm --filter storybook build
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
