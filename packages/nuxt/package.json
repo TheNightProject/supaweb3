@@ -1,6 +1,6 @@
 {
   "name": "@supaweb3/nuxt",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Nuxt 3/4 module for SupaWeb3 UI components",
   "homepage": "https://supaweb3.com",
   "type": "module",
@@ -14,7 +14,8 @@
   "main": "./dist/module.cjs",
   "types": "./dist/types.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "scripts": {
     "prepack": "nuxt-module-build build",
