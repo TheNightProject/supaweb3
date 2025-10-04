@@ -5,6 +5,26 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.2] - 2025-10-03
+
+### Fixed
+- CI build process now builds packages before typechecking to resolve TypeScript module errors
+- Added TypeScript declaration file generation using vite-plugin-dts for proper type exports
+- Removed auto-install of @nuxtjs/tailwindcss to prevent installation failures
+
+### Added
+- Smart Tailwind CSS detection supporting both v3 and v4
+- Auto-detection of @nuxt/ui (includes Tailwind v4)
+- Auto-detection of @nuxtjs/tailwindcss (Tailwind v3)
+- Auto-detection of @tailwindcss/postcss (Tailwind v4)
+- Tailwind content configuration documentation for both v3 and v4
+
+### Changed
+- Upgraded Storybook from 7.6.17 to 8.6.14 (latest stable)
+- Updated documentation with flexible Tailwind setup options
+- Added module configuration options documentation
+- Improved warning messages for missing Tailwind CSS
+
 ## [0.3.1] - 2025-10-02
 
 ### Changed

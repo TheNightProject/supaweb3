@@ -211,6 +211,44 @@ export default defineNuxtConfig({
 })
 ```
 
+**⚠️ IMPORTANT: Tailwind Content Configuration**
+
+SupaWeb3 components use Tailwind utility classes. You **must** configure Tailwind to scan the SupaWeb3 package files, otherwise components will render unstyled.
+
+**For Tailwind v4 (with @nuxt/ui):**
+
+Add to your `app.css` or `main.css`:
+
+```css
+@import "tailwindcss";
+
+/* Scan SupaWeb3 components for Tailwind classes */
+@source "node_modules/@thenightproject/supaweb3-ui/**/*.{js,mjs,vue}";
+/* or for NPM packages: */
+@source "node_modules/@supaweb3/ui/**/*.{js,mjs,vue}";
+```
+
+**For Tailwind v3 (with @nuxtjs/tailwindcss):**
+
+Update your `tailwind.config.js`:
+
+```javascript
+module.exports = {
+  content: [
+    './components/**/*.{js,vue,ts}',
+    './layouts/**/*.vue',
+    './pages/**/*.vue',
+    './plugins/**/*.{js,ts}',
+    './nuxt.config.{js,ts}',
+    './app.vue',
+    // Add SupaWeb3 components (GitHub Packages)
+    './node_modules/@thenightproject/supaweb3-ui/**/*.{js,mjs,vue}',
+    // or for NPM packages:
+    './node_modules/@supaweb3/ui/**/*.{js,mjs,vue}'
+  ]
+}
+```
+
 **Module Options:**
 
 ```javascript
