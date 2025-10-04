@@ -62,6 +62,6 @@ yarn.lock
 *.temp
 
 CLAUDE.md
-.claude 
+.claude
 website
-website-backuppackages/storybook/storybook-static/
+website-backup

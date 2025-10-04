@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.3] - 2025-10-04
+
+### Fixed
+- Storybook build now properly handles .vue files from workspace-linked UI package
+- Added explicit Vue plugin to Storybook's Vite configuration
+- Re-enabled Storybook build and GitHub Pages deployment in CI workflow
+- Fixed .gitignore formatting and removed storybook-static from git tracking
+
+### Changed
+- Storybook deployment to GitHub Pages now functional for component documentation
+
 ## [0.3.2] - 2025-10-03
 
 ### Fixed
