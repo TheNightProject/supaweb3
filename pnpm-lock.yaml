@@ -62,10 +62,10 @@ importers:
       '@tailwindcss/postcss':
         specifier: ^4.1.14
         version: 4.1.14
-      '@thenightproject/supaweb3-config':
+      '@supaweb3/config':
         specifier: workspace:*
         version: link:../config
-      '@thenightproject/supaweb3-ui':
+      '@supaweb3/ui':
         specifier: workspace:*
         version: link:../ui
     devDependencies:
@@ -93,7 +93,7 @@ importers:
 
   packages/storybook:
     dependencies:
-      '@thenightproject/supaweb3-ui':
+      '@supaweb3/ui':
         specifier: workspace:*
         version: link:../ui
       vue:

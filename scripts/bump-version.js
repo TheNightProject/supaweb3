@@ -71,7 +71,7 @@ packages.forEach(packageDir => {
   // Update internal dependencies to use workspace protocol
   if (pkg.dependencies) {
     Object.keys(pkg.dependencies).forEach(dep => {
-      if (dep.startsWith('@thenightproject/supaweb3-')) {
+      if (dep.startsWith('@supaweb3/')) {
         pkg.dependencies[dep] = 'workspace:*'
       }
     })

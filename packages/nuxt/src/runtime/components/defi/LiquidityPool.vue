@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { LiquidityPool as BaseLiquidityPool } from '@thenightproject/supaweb3-ui'
+import { LiquidityPool as BaseLiquidityPool } from '@supaweb3/ui'
 </script>
 
 <template>

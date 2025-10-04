@@ -10,7 +10,7 @@
     "typecheck": "echo 'Storybook typecheck skipped - demo files only'"
   },
   "dependencies": {
-    "@thenightproject/supaweb3-ui": "workspace:*",
+    "@supaweb3/ui": "workspace:*",
     "vue": "^3.4.21"
   },
   "devDependencies": {

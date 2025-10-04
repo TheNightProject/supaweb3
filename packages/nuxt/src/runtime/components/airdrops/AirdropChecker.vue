@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { AirdropChecker as BaseAirdropChecker } from '@thenightproject/supaweb3-ui'
+import { AirdropChecker as BaseAirdropChecker } from '@supaweb3/ui'
 </script>
 
 <template>

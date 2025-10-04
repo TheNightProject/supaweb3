@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { AirdropClaim as BaseAirdropClaim } from '@thenightproject/supaweb3-ui'
+import { AirdropClaim as BaseAirdropClaim } from '@supaweb3/ui'
 </script>
 
 <template>

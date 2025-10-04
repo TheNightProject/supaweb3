@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { WalletConnectButton as BaseWalletConnectButton } from '@thenightproject/supaweb3-ui'
+import { WalletConnectButton as BaseWalletConnectButton } from '@supaweb3/ui'
 </script>
 
 <template>

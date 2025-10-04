@@ -17,9 +17,9 @@ A comprehensive Vue 3 Web3 UI component library built with TypeScript and Tailwi
 
 | Package | Description |
 |---------|-------------|
-| `@thenightproject/supaweb3-ui` | Core Vue 3 Web3 UI components |
-| `@thenightproject/supaweb3-nuxt` | Nuxt 3/4 module for easy integration |
-| `@thenightproject/supaweb3-config` | Tailwind CSS configuration preset |
+| `@supaweb3/ui` | Core Vue 3 Web3 UI components |
+| `@supaweb3/nuxt` | Nuxt 3/4 module for easy integration |
+| `@supaweb3/config` | Tailwind CSS configuration preset |
 
 ## 🎨 Component Categories
 
@@ -87,7 +87,7 @@ A comprehensive Vue 3 Web3 UI component library built with TypeScript and Tailwi
 npm config set @thenightproject:registry https://npm.pkg.github.com
 
 # Install packages
-npm install @thenightproject/supaweb3-nuxt
+npm install @supaweb3/nuxt
 ```
 
 ### From NPM (Stable Releases)
@@ -100,7 +100,7 @@ npm install @supaweb3/nuxt
 ```bash
 # GitHub Packages
 pnpm config set @thenightproject:registry https://npm.pkg.github.com
-pnpm add @thenightproject/supaweb3-nuxt
+pnpm add @supaweb3/nuxt
 
 # NPM
 pnpm add @supaweb3/nuxt
@@ -110,7 +110,7 @@ pnpm add @supaweb3/nuxt
 ```bash
 # GitHub Packages
 yarn config set @thenightproject:registry https://npm.pkg.github.com
-yarn add @thenightproject/supaweb3-nuxt
+yarn add @supaweb3/nuxt
 
 # NPM
 yarn add @supaweb3/nuxt
@@ -150,8 +150,8 @@ import {
   WalletConnectButton,
   PortfolioOverview,
   TokenSwap
-} from '@thenightproject/supaweb3-ui'
-import '@thenightproject/supaweb3-ui/style.css'
+} from '@supaweb3/ui'
+import '@supaweb3/ui/style.css'
 
 const portfolioValue = ref(125430.50)
 const dailyChange = ref(2350.75)
@@ -198,7 +198,7 @@ pnpm add -D @nuxtjs/tailwindcss
 export default defineNuxtConfig({
   modules: [
     '@nuxt/ui',
-    '@thenightproject/supaweb3-nuxt'  // or '@supaweb3/nuxt' from NPM
+    '@supaweb3/nuxt'  // or '@supaweb3/nuxt' from NPM
   ]
 })
 
@@ -206,7 +206,7 @@ export default defineNuxtConfig({
 export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
-    '@thenightproject/supaweb3-nuxt'  // or '@supaweb3/nuxt' from NPM
+    '@supaweb3/nuxt'  // or '@supaweb3/nuxt' from NPM
   ]
 })
 ```
@@ -223,7 +223,7 @@ Add to your `app.css` or `main.css`:
 @import "tailwindcss";
 
 /* Scan SupaWeb3 components for Tailwind classes */
-@source "node_modules/@thenightproject/supaweb3-ui/**/*.{js,mjs,vue}";
+@source "node_modules/@supaweb3/ui/**/*.{js,mjs,vue}";
 /* or for NPM packages: */
 @source "node_modules/@supaweb3/ui/**/*.{js,mjs,vue}";
 ```
@@ -242,7 +242,7 @@ module.exports = {
     './nuxt.config.{js,ts}',
     './app.vue',
     // Add SupaWeb3 components (GitHub Packages)
-    './node_modules/@thenightproject/supaweb3-ui/**/*.{js,mjs,vue}',
+    './node_modules/@supaweb3/ui/**/*.{js,mjs,vue}',
     // or for NPM packages:
     './node_modules/@supaweb3/ui/**/*.{js,mjs,vue}'
   ]
@@ -253,7 +253,7 @@ module.exports = {
 
 ```javascript
 export default defineNuxtConfig({
-  modules: ['@thenightproject/supaweb3-nuxt'],
+  modules: ['@supaweb3/nuxt'],
   supaweb3: {
     prefix: '',           // Component prefix (e.g., 'Supa' -> <SupaWalletConnectButton>)
     global: true,         // Auto-import components globally
@@ -273,7 +273,7 @@ export default defineNuxtConfig({
 ```javascript
 // tailwind.config.js (GitHub Packages)
 module.exports = {
-  presets: [require('@thenightproject/supaweb3-config')],
+  presets: [require('@supaweb3/config')],
   content: [
     './components/**/*.{js,vue,ts}',
     './layouts/**/*.vue',
@@ -388,7 +388,7 @@ The project uses GitHub Actions for automated publishing to both GitHub Packages
 
 | Feature | GitHub Packages | NPM |
 |---------|----------------|-----|
-| **Scope** | `@thenightproject/supaweb3-*` | `@supaweb3/*` |
+| **Scope** | `@supaweb3/*` | `@supaweb3/*` |
 | **Access** | Public | Public |
 | **Use Case** | Development, testing, latest features | Stable releases |
 | **Registry** | npm.pkg.github.com | registry.npmjs.org |

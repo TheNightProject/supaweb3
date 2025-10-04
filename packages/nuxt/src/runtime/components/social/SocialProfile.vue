@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { SocialProfile as BaseSocialProfile } from '@thenightproject/supaweb3-ui'
+import { SocialProfile as BaseSocialProfile } from '@supaweb3/ui'
 </script>
 
 <template>

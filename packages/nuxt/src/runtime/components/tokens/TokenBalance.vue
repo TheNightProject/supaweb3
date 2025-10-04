@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { TokenBalance as BaseTokenBalance } from '@thenightproject/supaweb3-ui'
+import { TokenBalance as BaseTokenBalance } from '@supaweb3/ui'
 </script>
 
 <template>

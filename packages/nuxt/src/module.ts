@@ -26,7 +26,7 @@ const module: NuxtModule<ModuleOptions> = defineNuxtModule<ModuleOptions>({
     const runtimeDir = fileURLToPath(new URL('./runtime', import.meta.url))
 
     // Add CSS
-    nuxt.options.css.push('@thenightproject/supaweb3-ui/style.css')
+    nuxt.options.css.push('@supaweb3/ui/style.css')
 
     // Auto-import components
     await addComponentsDir({
@@ -58,7 +58,7 @@ const module: NuxtModule<ModuleOptions> = defineNuxtModule<ModuleOptions>({
         // Tailwind v3 via @nuxtjs/tailwindcss
         nuxt.hook('tailwindcss:config' as any, (tailwindConfig: any) => {
           tailwindConfig.presets = tailwindConfig.presets || []
-          tailwindConfig.presets.push('@thenightproject/supaweb3-config')
+          tailwindConfig.presets.push('@supaweb3/config')
         })
       } else if (hasNuxtUI || hasTailwindV4) {
         // Tailwind v4 is present (via @nuxt/ui or @tailwindcss/postcss)
@@ -75,8 +75,8 @@ const module: NuxtModule<ModuleOptions> = defineNuxtModule<ModuleOptions>({
       }
     }
 
-    // Transpile @thenightproject/supaweb3-ui
-    nuxt.options.build.transpile.push('@thenightproject/supaweb3-ui')
+    // Transpile @supaweb3/ui
+    nuxt.options.build.transpile.push('@supaweb3/ui')
   }
 })
 

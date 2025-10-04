@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { SendToken as BaseSendToken } from '@thenightproject/supaweb3-ui'
+import { SendToken as BaseSendToken } from '@supaweb3/ui'
 </script>
 
 <template>

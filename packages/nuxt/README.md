@@ -17,7 +17,7 @@ npm install @supaweb3/nuxt
 
 # From GitHub Packages (latest)
 npm config set @thenightproject:registry https://npm.pkg.github.com
-npm install @thenightproject/supaweb3-nuxt
+npm install @supaweb3/nuxt
 ```
 
 ### Setup

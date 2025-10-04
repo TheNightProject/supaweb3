@@ -5,6 +5,28 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.0] - 2025-10-04
+
+### Changed
+- **BREAKING:** Renamed package scope from `@thenightproject/supaweb3-*` to `@supaweb3/*`
+  - `@thenightproject/supaweb3-ui` → `@supaweb3/ui`
+  - `@thenightproject/supaweb3-nuxt` → `@supaweb3/nuxt`
+  - `@thenightproject/supaweb3-config` → `@supaweb3/config`
+- Updated all imports and references throughout codebase to use new package names
+- Updated CI/CD workflows to reference new package names
+- Updated documentation with new package installation instructions
+
+### Migration Guide
+Users upgrading from 0.3.x need to update their imports:
+
+```diff
+- import { WalletConnectButton } from '@thenightproject/supaweb3-ui'
++ import { WalletConnectButton } from '@supaweb3/ui'
+
+- modules: ['@thenightproject/supaweb3-nuxt']
++ modules: ['@supaweb3/nuxt']
+```
+
 ## [0.3.3] - 2025-10-04
 
 ### Fixed

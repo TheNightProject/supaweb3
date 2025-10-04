@@ -1,6 +1,6 @@
 {
-  "name": "@thenightproject/supaweb3-nuxt",
-  "version": "0.3.3",
+  "name": "@supaweb3/nuxt",
+  "version": "0.4.0",
   "description": "Nuxt 3/4 module for SupaWeb3 UI components",
   "homepage": "https://supaweb3.com",
   "type": "module",
@@ -26,8 +26,8 @@
   },
   "dependencies": {
     "@nuxt/kit": "^3.11.1",
-    "@thenightproject/supaweb3-config": "workspace:*",
-    "@thenightproject/supaweb3-ui": "workspace:*"
+    "@supaweb3/config": "workspace:*",
+    "@supaweb3/ui": "workspace:*"
   },
   "devDependencies": {
     "@nuxt/devtools": "^1.0.8",

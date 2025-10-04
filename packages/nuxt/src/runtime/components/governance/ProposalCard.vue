@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ProposalCard as BaseProposalCard } from '@thenightproject/supaweb3-ui'
+import { ProposalCard as BaseProposalCard } from '@supaweb3/ui'
 </script>
 
 <template>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { AirdropHistory as BaseAirdropHistory } from '@thenightproject/supaweb3-ui'
+import { AirdropHistory as BaseAirdropHistory } from '@supaweb3/ui'
 </script>
 
 <template>

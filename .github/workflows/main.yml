@@ -186,9 +186,9 @@ jobs:
             pnpm changeset version --snapshot beta
           else
             echo "---" > .changeset/auto-version.md
-            echo '"@thenightproject/supaweb3-ui": ${{ github.event.inputs.version_type }}' >> .changeset/auto-version.md
-            echo '"@thenightproject/supaweb3-config": ${{ github.event.inputs.version_type }}' >> .changeset/auto-version.md
-            echo '"@thenightproject/supaweb3-nuxt": ${{ github.event.inputs.version_type }}' >> .changeset/auto-version.md
+            echo '"@supaweb3/ui": ${{ github.event.inputs.version_type }}' >> .changeset/auto-version.md
+            echo '"@supaweb3/config": ${{ github.event.inputs.version_type }}' >> .changeset/auto-version.md
+            echo '"@supaweb3/nuxt": ${{ github.event.inputs.version_type }}' >> .changeset/auto-version.md
             echo "---" >> .changeset/auto-version.md
             echo "" >> .changeset/auto-version.md
             echo "Automated version bump: ${{ github.event.inputs.version_type }}" >> .changeset/auto-version.md
@@ -199,9 +199,9 @@ jobs:
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
           echo "---" > .changeset/auto-patch.md
-          echo '"@thenightproject/supaweb3-ui": patch' >> .changeset/auto-patch.md
-          echo '"@thenightproject/supaweb3-config": patch' >> .changeset/auto-patch.md
-          echo '"@thenightproject/supaweb3-nuxt": patch' >> .changeset/auto-patch.md
+          echo '"@supaweb3/ui": patch' >> .changeset/auto-patch.md
+          echo '"@supaweb3/config": patch' >> .changeset/auto-patch.md
+          echo '"@supaweb3/nuxt": patch' >> .changeset/auto-patch.md
           echo "---" >> .changeset/auto-patch.md
           echo "" >> .changeset/auto-patch.md
           echo "Automated patch version bump for main branch" >> .changeset/auto-patch.md
@@ -270,16 +270,16 @@ jobs:
 
             if (!pkg.private) {
               // Reset to original NPM-friendly names for NPM publishing
-              if (pkg.name.startsWith('@thenightproject/supaweb3-')) {
-                const pkgName = pkg.name.replace('@thenightproject/supaweb3-', '');
+              if (pkg.name.startsWith('@supaweb3/')) {
+                const pkgName = pkg.name.replace('@supaweb3/', '');
                 pkg.name = '@supaweb3/' + pkgName;
               }
 
               // Update internal dependencies and resolve workspace protocol
               if (pkg.dependencies) {
                 Object.keys(pkg.dependencies).forEach(dep => {
-                  if (dep.startsWith('@thenightproject/supaweb3-')) {
-                    const newDepName = '@supaweb3/' + dep.replace('@thenightproject/supaweb3-', '');
+                  if (dep.startsWith('@supaweb3/')) {
+                    const newDepName = '@supaweb3/' + dep.replace('@supaweb3/', '');
                     // Convert workspace:* to actual version
                     pkg.dependencies[newDepName] = pkg.dependencies[dep] === 'workspace:*' ? '^' + version : pkg.dependencies[dep];
                     delete pkg.dependencies[dep];
@@ -410,9 +410,9 @@ jobs:
             This release includes the latest SupaWeb3 UI components and features for Vue 3 and Nuxt 3.
 
             ### 📦 Package Versions
-            - @thenightproject/supaweb3-ui: v${{ steps.package-version.outputs.version }}
-            - @thenightproject/supaweb3-config: v${{ steps.package-version.outputs.version }}
-            - @thenightproject/supaweb3-nuxt: v${{ steps.package-version.outputs.version }}
+            - @supaweb3/ui: v${{ steps.package-version.outputs.version }}
+            - @supaweb3/config: v${{ steps.package-version.outputs.version }}
+            - @supaweb3/nuxt: v${{ steps.package-version.outputs.version }}
 
             ### 🔧 Installation (GitHub Packages)
             ```bash
@@ -420,13 +420,13 @@ jobs:
             npm config set @thenightproject:registry https://npm.pkg.github.com
 
             # Install packages
-            npm install @thenightproject/supaweb3-nuxt
+            npm install @supaweb3/nuxt
             ```
 
             Or with pnpm:
             ```bash
             pnpm config set @thenightproject:registry https://npm.pkg.github.com
-            pnpm add @thenightproject/supaweb3-nuxt
+            pnpm add @supaweb3/nuxt
             ```
 
             ### 📚 Documentation

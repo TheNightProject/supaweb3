@@ -1,6 +1,6 @@
 {
-  "name": "@thenightproject/supaweb3-config",
-  "version": "0.3.3",
+  "name": "@supaweb3/config",
+  "version": "0.4.0",
   "description": "Tailwind CSS configuration preset for SupaWeb3 UI",
   "homepage": "https://supaweb3.com",
   "main": "index.js",

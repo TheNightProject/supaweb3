@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { GasTracker as BaseGasTracker } from '@thenightproject/supaweb3-ui'
+import { GasTracker as BaseGasTracker } from '@supaweb3/ui'
 </script>
 
 <template>
