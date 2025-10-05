@@ -28,6 +28,16 @@ const module: NuxtModule<ModuleOptions> = defineNuxtModule<ModuleOptions>({
     // Add CSS
     nuxt.options.css.push('@supaweb3/ui/style.css')
 
+    // Add Tailwind v4 source scanning CSS if Tailwind v4 is detected
+    const hasNuxtUI = nuxt.options.modules.some(m =>
+      typeof m === 'string' ? m === '@nuxt/ui' : false
+    )
+    const hasTailwindV4 = nuxt.options.postcss?.plugins?.['@tailwindcss/postcss'] !== undefined
+
+    if (hasNuxtUI || hasTailwindV4) {
+      nuxt.options.css.push(resolver.resolve(runtimeDir, 'supaweb3-tailwind.css'))
+    }
+
     // Auto-import components
     await addComponentsDir({
       path: resolver.resolve(runtimeDir, 'components'),

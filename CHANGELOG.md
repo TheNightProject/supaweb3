@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.2] - 2025-10-04
+
+### Added
+- Automatic Tailwind v4 source scanning for SupaWeb3 components
+- Created `supaweb3-tailwind.css` file with `@source` directives for Tailwind v4
+- Auto-detection and injection of Tailwind v4 source scanning when @nuxt/ui or @tailwindcss/postcss is present
+
+### Changed
+- Improved Tailwind v4 integration - no manual `@source` configuration needed in user's CSS files
+- Nuxt module now automatically includes component scanning for Tailwind v4 projects
+
 ## [0.4.1] - 2025-10-04
 
 ### Changed

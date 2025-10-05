@@ -1,0 +1,3 @@
+/* SupaWeb3 Tailwind v4 source scanning */
+@source "../../ui/src/**/*.vue";
+@source "../components/**/*.vue";

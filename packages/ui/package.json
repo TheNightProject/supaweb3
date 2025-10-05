@@ -1,6 +1,6 @@
 {
   "name": "@supaweb3/ui",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Vue 3 Web3 UI components built with Tailwind CSS",
   "homepage": "https://supaweb3.com",
   "main": "dist/index.js",
